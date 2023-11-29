@@ -47,4 +47,32 @@ You can quickly perform operations with numbers by adding another character afte
 13  /a now contains 120 (! is the factorial operator, only works when math is imported, as we did using >i math)
 ```
 
-### Note: Finish this
+### Key Variables
+You can access special values using key variables. These are formed by using the `key` keyword, followed by a dot and the variable name. Here are some examples:
+```
+key.help - Basic information about the key variables and lists all possible variables you can access.
+key.variables - Only usable in [out]; Prints all variables defined thus far, including all key variables and their values.
+```
+
+## Libraries and Modules
+You can import libraries/modules using the inclusion operator (`>`) and using the command `i`, which stands for import.<br>
+Syntax: `>i module_name`<br>
+Available modules as of now: math
+
+### Math `>i math`
+Math allows the usage of the factorial operator (`+!variable;`)
+
+## Commands
+All commands must be surrounded with square brackets, their parameters come after.
+
+### Out
+Used to print a single value to the console. The value can be a literal or a variable.<br>
+Syntax: `[out]value;`<br>
+Example:
+```
+1              [out]"Hello World";
+Output from 1  Hello World
+2              +v=72;
+3              [out]v;
+Output from 3  72.0
+```
