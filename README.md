@@ -8,4 +8,4 @@ Currently in very early phases, literally useless. Can only store variables, do 
 
 <hr>
 
-<a href="https://kingpvz.github.io/projects/pilx/docs"><h1>Documentation</h1></a>
+[Documentation](https://kingpvz.github.io/projects/pilx/docs)
