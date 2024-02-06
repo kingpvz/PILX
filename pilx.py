@@ -28,7 +28,7 @@ def command_basic(a,iter):
                 else:
                     print("Error at line "+str(iter)+". String declaration is incorrect.")
             elif a[5] in string.digits:
-                print(a[5:-2])
+                print(a[5:-1])
             else:
                 if a[5:-1].strip() == "key.variables": print(variables)
                 elif a[5:-1].strip() in variables.keys(): print(variables[a[5:-1].strip()])
@@ -79,8 +79,8 @@ def command_variable(a,iter):
         else:
             print("Error at line {0}. This operator is only available after a module is imported.".format(iter))
     elif a[a.find("+"):a.find("=")] == "": print("Error!",a,"is a faulty expression. Declared variable has no name.")
-    elif a[1:-1].strip()[1] in string.digits: print("Error!",a,"is a faulty expression. A variable name cannot start with a digit.")
-    elif (a[1:-1].strip()[1] not in string.ascii_letters) and a[1:-1].strip()[1] !="_": print("Error!",a,"is a faulty expression. A variable name cannot start with a special character.")
+    elif a[1:-1].strip()[0] in string.digits: print("Error!",a,"is a faulty expression. A variable name cannot start with a digit.")
+    elif (a[1:-1].strip()[0] not in string.ascii_letters) and a[1:-1].strip()[1] !="_": print("Error!",a,"is a faulty expression. A variable name cannot start with a special character.")
     elif all(False if j not in string.ascii_letters or j !="_" or j not in string.digits else True for j in a[1:a.find("=")].strip()): print("Error!",a,"is a faulty expression. A variable name can only contain numbers, letters and underscores.")
     else:
         tes = a.find("=")
